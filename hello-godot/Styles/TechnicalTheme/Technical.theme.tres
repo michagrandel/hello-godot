@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=8 format=2]
+
+[ext_resource path="res://Styles/Font/RobotoMedium32.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Styles/TechnicalTheme/Buttons/Technical_Button.focus.tres" type="StyleBox" id=2]
+[ext_resource path="res://Styles/TechnicalTheme/Buttons/Technical_Button.normal.tres" type="StyleBox" id=3]
+[ext_resource path="res://Styles/TechnicalTheme/Buttons/Technical_Button.hover.tres" type="StyleBox" id=4]
+[ext_resource path="res://Styles/TechnicalTheme/Buttons/Technical_Button.disabled.tres" type="StyleBox" id=5]
+[ext_resource path="res://Styles/TechnicalTheme/Buttons/Technical_Button.pressed.tres" type="StyleBox" id=6]
+[ext_resource path="res://Gfx/Icons/Transparent.12x12.png" type="Texture" id=7]
+
+[resource]
+default_font = ExtResource( 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_focus = Color( 0.160784, 0.160784, 0.160784, 1 )
+Button/colors/font_color_hover = Color( 0.160784, 0.160784, 0.160784, 1 )
+Button/colors/font_color_pressed = Color( 0.160784, 0.160784, 0.160784, 1 )
+Button/styles/disabled = ExtResource( 5 )
+Button/styles/focus = ExtResource( 2 )
+Button/styles/hover = ExtResource( 4 )
+Button/styles/normal = ExtResource( 3 )
+Button/styles/pressed = ExtResource( 6 )
+CheckBox/icons/radio_checked = ExtResource( 7 )
+CheckBox/icons/radio_unchecked = ExtResource( 7 )
+OptionButton/icons/arrow = ExtResource( 7 )

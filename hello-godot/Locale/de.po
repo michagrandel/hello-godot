@@ -1,0 +1,100 @@
+# Translations template for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Hello Godot 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-04-23 23:27+0200\n"
+"PO-Revision-Date: 2022-04-23 23:45+0200\n"
+"Last-Translator: Micha Grandel <micha@plywoodpirate.de>\n"
+"Language-Team: Plywoodpirate Translation <translation@plywoodpirate.de>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.10.1\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: Scene/UI/MainMenu.tscn:93
+msgid "New Game"
+msgstr "Neues Spiel"
+
+#: Scene/UI/MainMenu.tscn:149
+msgid ""
+"This is an early technical preview!\n"
+"All art and content are just placeholders!\n"
+"Do not publish any recordings or other information of this version.\n"
+"Do not publish this version witout written permission!"
+msgstr ""
+"Dies ist eine technische Vorschau!\n"
+"Alle Grafiken und Inhalte sind Platzhalter!\n"
+"Keine Veröffentlichung von Aufnahmen oder anderen Informationen über diese "
+"Version.\n"
+"Keine Veröffentlichung dieser Version ohne schriftliche Genehmigung!"
+
+#: Scene/UI/MainMenu.tscn:163
+msgid "{version}"
+msgstr "{version}"
+
+#: Scene/UI/OptionMenu.tscn:24
+msgid "Return to main menu"
+msgstr "Zurück zum Hauptmenü"
+
+#: Scene/UI/TechnicalPreviewWarning.tscn:28
+msgid ""
+"Version {version}\n"
+"(Early technical preview)"
+msgstr ""
+"Version {version}\n"
+"(Frühe technische Vorschau)"
+
+#: Scene/UI/TechnicalPreviewWarning.tscn:38
+msgid ""
+"This is an early technical preview. \n"
+"Things are expecteed to be buggy and really shitty around here. \n"
+"\n"
+"Art and content creation for the game has not even started yet! \n"
+"All art and content you will see is just placeholder stuff, probably found "
+"somewhere in the internet!"
+msgstr ""
+"Dies ist eine frühe technische Vorschau.\n"
+"Es ist zu erwarten, dass hier einige Dinge buggy und richtig schlecht "
+"sind.\n"
+"\n"
+"Die Produktion von Grafik und Inhalten für diese Spiel hat noch nicht "
+"begonnen!\n"
+"Alle Grafiken und Inhalte, die du sehen wirst, sind nur Platzhalter, "
+"wahrscheinlich irgendwo aus dem Internet!"
+
+#: Scene/UI/TechnicalPreviewWarning.tscn:51
+msgid ""
+"Do not publish any recordings or other information of this version.\n"
+"Do not publish this version witout written permission!"
+msgstr ""
+"Keine Veröffentlichung von Aufnahmen oder anderen Informationen über diese "
+"Version.\n"
+"Keine Veröffentlichung dieser Version ohne schriftliche Genehmigung!"
+
+#: Scene/UI/TechnicalPreviewWarning.tscn:66
+msgid "I understand"
+msgstr "Ich verstehe"
+
+#: Scene/UI/TechnicalPreviewWarning.tscn:75
+msgid "Exit"
+msgstr "Beenden"
+
+#: Scene/UI/TechnicalPreviewWarning.tscn:90
+msgid "Language"
+msgstr "Sprache"
+
+#: Script/Navigation/LanguageSelector.gd:4
+msgid "German"
+msgstr "Deutsch"
+
+#: Script/Navigation/LanguageSelector.gd:5
+msgid "English"
+msgstr "Englisch"

@@ -1,0 +1,167 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Styles/MainButton_hover.tres" type="StyleBox" id=1]
+[ext_resource path="res://Script/Utility/VersionLabel.gd" type="Script" id=2]
+[ext_resource path="res://Styles/MainButton_normal.tres" type="StyleBox" id=3]
+[ext_resource path="res://Script/Navigation/SceneLoaderButton.gd" type="Script" id=4]
+[ext_resource path="res://Styles/TourneyBold.theme.tres" type="Theme" id=6]
+[ext_resource path="res://Styles/MainButton_focus.tres" type="StyleBox" id=7]
+[ext_resource path="res://Styles/MainButton_pressed.tres" type="StyleBox" id=8]
+[ext_resource path="res://Script/Utility/QuitButton.gd" type="Script" id=9]
+[ext_resource path="res://Gfx/Icons/settings-gears.white.png" type="Texture" id=10]
+[ext_resource path="res://Gfx/Icons/close.white.png" type="Texture" id=11]
+[ext_resource path="res://Gfx/Background/Background (9).jpg" type="Texture" id=12]
+
+[sub_resource type="VisualScriptFunction" id=1]
+resource_name = "_pressed"
+
+[sub_resource type="VisualScriptBuiltinFunc" id=2]
+function = 56
+
+[sub_resource type="VisualScriptVariableGet" id=3]
+var_name = "name"
+
+[sub_resource type="VisualScript" id=4]
+data = {
+"base_type": "Button",
+"functions": [ {
+"data_connections": [ 3, 0, 1, 0 ],
+"function_id": 0,
+"name": "_pressed",
+"nodes": [ 0, Vector2( 420, 300 ), SubResource( 1 ), 1, Vector2( 780, 300 ), SubResource( 2 ), 3, Vector2( 560, 400 ), SubResource( 3 ) ],
+"scroll": Vector2( -50, -100 ),
+"sequence_connections": [ 0, 0, 1 ]
+}, {
+"data_connections": [  ],
+"function_id": -1,
+"name": "f_312843592",
+"nodes": [  ],
+"scroll": Vector2( 43, 0 ),
+"sequence_connections": [  ]
+} ],
+"is_tool_script": false,
+"signals": [  ],
+"variables": [ {
+"default_value": "Hello World",
+"export": false,
+"hint": 0,
+"hint_string": "",
+"name": "name",
+"type": 4,
+"usage": 7
+} ],
+"vs_unify": true
+}
+
+[node name="Main Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 7
+
+[node name="NewGameButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -171.0
+margin_top = -97.0
+margin_right = 188.0
+margin_bottom = -22.0
+rect_min_size = Vector2( 0, 50 )
+rect_pivot_offset = Vector2( 133, 40 )
+focus_neighbour_top = NodePath("../Buttons/QuitButton")
+focus_neighbour_bottom = NodePath("../Buttons/OptionsButton")
+focus_next = NodePath("../Buttons/OptionsButton")
+focus_previous = NodePath("../Buttons/QuitButton")
+size_flags_horizontal = 3
+theme = ExtResource( 6 )
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 8 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/normal = ExtResource( 3 )
+text = "New Game"
+script = SubResource( 4 )
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -171.0
+margin_top = 31.0
+margin_right = -51.0
+margin_bottom = 109.0
+rect_min_size = Vector2( 50, 50 )
+custom_constants/separation = 20
+
+[node name="OptionsButton" type="Button" parent="Buttons"]
+margin_right = 50.0
+margin_bottom = 78.0
+rect_min_size = Vector2( 50, 50 )
+focus_neighbour_top = NodePath("../../NewGameButton")
+focus_neighbour_bottom = NodePath("../QuitButton")
+focus_next = NodePath("../QuitButton")
+focus_previous = NodePath("../../NewGameButton")
+theme = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 8 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 10 )
+flat = true
+clip_text = true
+expand_icon = true
+script = ExtResource( 4 )
+scenePath = "res://Scene/UI/OptionMenu.tscn"
+
+[node name="QuitButton" type="Button" parent="Buttons"]
+margin_left = 70.0
+margin_right = 120.0
+margin_bottom = 78.0
+rect_min_size = Vector2( 50, 50 )
+rect_pivot_offset = Vector2( 240, 41 )
+focus_neighbour_top = NodePath("../OptionsButton")
+focus_neighbour_bottom = NodePath("../../NewGameButton")
+focus_next = NodePath("../../NewGameButton")
+focus_previous = NodePath("../OptionsButton")
+theme = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 8 )
+custom_styles/normal = ExtResource( 3 )
+icon = ExtResource( 11 )
+flat = true
+clip_text = true
+expand_icon = true
+script = ExtResource( 9 )
+
+[node name="TechnicalPreviewWarning" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 11.0
+margin_right = 1475.0
+margin_bottom = 164.0
+theme = ExtResource( 6 )
+text = "This is an early technical preview!
+All art and content are just placeholders!
+Do not publish any recordings or other information of this version.
+Do not publish this version witout written permission!"
+
+[node name="VersionLabel" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -250.0
+margin_top = -41.0
+margin_right = -8.0
+theme = ExtResource( 6 )
+text = "{version}"
+align = 2
+valign = 2
+script = ExtResource( 2 )

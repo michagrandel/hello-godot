@@ -1,0 +1,113 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Script/Navigation/SceneLoaderButton.gd" type="Script" id=1]
+[ext_resource path="res://Script/Utility/QuitButton.gd" type="Script" id=2]
+[ext_resource path="res://Styles/TechnicalTheme/Technical.theme.tres" type="Theme" id=3]
+[ext_resource path="res://Script/Utility/VersionLabel.gd" type="Script" id=4]
+[ext_resource path="res://Script/Navigation/LanguageSelector.gd" type="Script" id=5]
+[ext_resource path="res://Gfx/Icons/button_xbox_digital_a_2.png" type="Texture" id=6]
+[ext_resource path="res://Gfx/Icons/button_xbox_digital_b_3.png" type="Texture" id=7]
+[ext_resource path="res://Gfx/Icons/button_xbox_digital_y_3.png" type="Texture" id=8]
+
+[node name="Technical Preview Warning" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 771, 376 )
+
+[node name="Root" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Content" type="VBoxContainer" parent="Root"]
+margin_left = 360.0
+margin_top = 227.0
+margin_right = 1560.0
+margin_bottom = 853.0
+custom_constants/separation = 52
+
+[node name="Version Label" type="Label" parent="Root/Content"]
+margin_right = 1200.0
+margin_bottom = 79.0
+theme = ExtResource( 3 )
+text = "Version {version}
+(Early technical preview)"
+align = 1
+script = ExtResource( 4 )
+
+[node name="Agreement Label" type="Label" parent="Root/Content"]
+margin_top = 131.0
+margin_right = 1200.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 1200, 0 )
+theme = ExtResource( 3 )
+text = "This is an early technical preview. 
+Things are expecteed to be buggy and really shitty around here. 
+
+Art and content creation for the game has not even started yet! 
+All art and content you will see is just placeholder stuff, probably found somewhere in the internet!"
+align = 1
+autowrap = true
+
+[node name="Restrictions Label" type="Label" parent="Root/Content"]
+margin_top = 426.0
+margin_right = 1200.0
+margin_bottom = 505.0
+theme = ExtResource( 3 )
+text = "Do not publish any recordings or other information of this version.
+Do not publish this version witout written permission!"
+align = 1
+
+[node name="Buttons" type="HBoxContainer" parent="Root/Content"]
+margin_top = 557.0
+margin_right = 1200.0
+margin_bottom = 626.0
+custom_constants/separation = 76
+alignment = 1
+
+[node name="AcceptButton" type="Button" parent="Root/Content/Buttons"]
+margin_left = 379.0
+margin_right = 625.0
+margin_bottom = 69.0
+focus_neighbour_right = NodePath("../QuitButton")
+focus_next = NodePath("../QuitButton")
+theme = ExtResource( 3 )
+text = "I understand"
+icon = ExtResource( 6 )
+script = ExtResource( 1 )
+scenePath = "res://Scene/UI/MainMenu.tscn"
+
+[node name="QuitButton" type="Button" parent="Root/Content/Buttons"]
+margin_left = 701.0
+margin_right = 820.0
+margin_bottom = 69.0
+focus_neighbour_left = NodePath("../AcceptButton")
+focus_previous = NodePath("../AcceptButton")
+theme = ExtResource( 3 )
+text = "Exit"
+icon = ExtResource( 7 )
+script = ExtResource( 2 )
+
+[node name="Languages" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -187.0
+margin_top = 33.0
+margin_right = -33.0
+margin_bottom = 76.0
+theme = ExtResource( 3 )
+
+[node name="ButtonXboxDigitalY3" type="Sprite" parent="Languages"]
+position = Vector2( -46.25, 25.75 )
+scale = Vector2( 0.130208, 0.130208 )
+texture = ExtResource( 8 )
+
+[node name="OptionButton" type="OptionButton" parent="Languages"]
+margin_right = 154.0
+margin_bottom = 43.0
+focus_neighbour_bottom = NodePath("../../Root/Content/Buttons/AcceptButton")
+focus_next = NodePath("../../Root/Content/Buttons/AcceptButton")
+theme = ExtResource( 3 )
+text = "Language"
+script = ExtResource( 5 )
+
+[connection signal="item_selected" from="Languages/OptionButton" to="Languages/OptionButton" method="_on_item_selected"]

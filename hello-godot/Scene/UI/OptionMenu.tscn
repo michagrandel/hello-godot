@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Styles/MainButton_hover.tres" type="StyleBox" id=1]
+[ext_resource path="res://Styles/MainButton_normal.tres" type="StyleBox" id=2]
+[ext_resource path="res://Script/Navigation/SceneLoaderButton.gd" type="Script" id=3]
+[ext_resource path="res://Styles/TourneyBold.theme.tres" type="Theme" id=4]
+[ext_resource path="res://Styles/MainButton_focus.tres" type="StyleBox" id=5]
+[ext_resource path="res://Styles/MainButton_pressed.tres" type="StyleBox" id=6]
+
+[node name="OptionMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ReturnToMainMenuButton" type="Button" parent="."]
+margin_left = 314.0
+margin_top = 493.0
+margin_right = 743.0
+margin_bottom = 569.0
+theme = ExtResource( 4 )
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/focus = ExtResource( 5 )
+custom_styles/normal = ExtResource( 2 )
+text = "Return to main menu"
+script = ExtResource( 3 )
+scenePath = "res://Scene/UI/MainMenu.tscn"
