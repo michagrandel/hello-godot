@@ -1,2 +1,36 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.otf filter=lfs diff=lfs merge=lfs -text
+
+# Add 3D objects to LFS
+*.obj filter=lfs diff=lfs merge=lfs -text
+*.gltf filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+
+# Add simple images to LFS
+*.png filter=lfs diff=lfs merge=lfs -binary
+*.jpg filter=lfs diff=lfs merge=lfs -binary
+*.jpeg filter=lfs diff=lfs merge=lfs -binary
+*.tga filter=lfs diff=lfs merge=lfs -binary
+*.tiff filter=lfs diff=lfs merge=lfs -binary
+*.tif filter=lfs diff=lfs merge=lfs -binary
+*.webp filter=lfs diff=lfs merge=lfs -binary
+
+# Add vector images to LFS
+*.svg filter=lfs diff=lfs merge=lfs -text
+
+# Add Adobe Graphic Files to LFS
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.psb filter=lfs diff=lfs merge=lfs -text
+*.ai filter=lfs diff=lfs merge=lfs -text
+
+# Add Godot import references to LFS
+*.import filter=lfs diff=lfs merge=lfs -text
+
+# Add Godot .import/** Files to LFS
+.import/*.stex filter=lfs diff=lfs merge=lfs -binary
+.import/*.md5 filter=lfs diff=lfs merge=lfs -text
+.import/*.stex filter=lfs diff=lfs merge=lfs -binary
+.import/*.mesh filter=lfs diff=lfs merge=lfs -binary
+.import/*.scn filter=lfs diff=lfs merge=lfs -binary
