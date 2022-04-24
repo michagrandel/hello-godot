@@ -1,35 +1,3 @@
-[remap]
-
-importer="texture"
-type="StreamTexture"
-path="res://.import/button_xbox_digital_a_2.png-2eedb58dd243d52a3f65c7a15ec9ab3a.stex"
-metadata={
-"vram_texture": false
-}
-
-[deps]
-
-source_file="res://GFX/Icons/button_xbox_digital_a_2.png"
-dest_files=[ "res://.import/button_xbox_digital_a_2.png-2eedb58dd243d52a3f65c7a15ec9ab3a.stex" ]
-
-[params]
-
-compress/mode=0
-compress/lossy_quality=0.7
-compress/hdr_mode=0
-compress/bptc_ldr=0
-compress/normal_map=0
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
-process/fix_alpha_border=true
-process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
-process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=true
-svg/scale=1.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ba9d48e7e51654554ef5c80284e37bbca4613b61464f7ecd3d8fb6f7fc04664
+size 741

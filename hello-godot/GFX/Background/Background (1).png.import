@@ -1,35 +1,3 @@
-[remap]
-
-importer="texture"
-type="StreamTexture"
-path="res://.import/Background (1).png-b70732e19f47a7f2f3cab476d80f0fc8.stex"
-metadata={
-"vram_texture": false
-}
-
-[deps]
-
-source_file="res://GFX/Background/Background (1).png"
-dest_files=[ "res://.import/Background (1).png-b70732e19f47a7f2f3cab476d80f0fc8.stex" ]
-
-[params]
-
-compress/mode=0
-compress/lossy_quality=0.7
-compress/hdr_mode=0
-compress/bptc_ldr=0
-compress/normal_map=0
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
-process/fix_alpha_border=true
-process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
-process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=true
-svg/scale=1.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:f632ed13090772408ebae78ab2d02ac27e039c9e68edf8d57b2bc3f3ee6b93a9
+size 719
