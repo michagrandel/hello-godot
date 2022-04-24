@@ -81,7 +81,7 @@ ui_page_down={
 
 [locale]
 
-translations=PoolStringArray( "res://locale/de.po" )
+translations=PoolStringArray( "res://Locale/de.po" )
 
 [physics]
 
